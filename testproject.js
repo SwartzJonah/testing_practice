@@ -32,5 +32,11 @@ const calculator = {
     }
 }
 
-module.exports = {capitalize, reverseString, calculator}
+function ceaserCipher(string, shift){
+    return string.replace(/[a-z]/g, (char) =>
+        String.fromCharCode(((char.charCodeAt(0) - 97 + shift) % 26) + 97)
+  );
+}
+
+module.exports = {capitalize, reverseString, calculator, ceaserCipher}
 
